@@ -1,0 +1,147 @@
+% Contributions are much appreciated, in order to contribute to this project, head over to this repository:
+% https://github.com/bshramin/uofa-eng-assignment
+
+\documentclass[11pt,letterpaper]{article}
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\pagestyle{empty}
+\DeclareMathOperator{\tr}{Tr}
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\opvec}[1]{\check{\vec #1}}
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+\usepackage{lipsum}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\pagestyle{plain}
+
+\begin{flushleft}
+Estudiante: Fabio Quimbay\\
+Email: fabio.quimbay883@comunidadunir.net\\
+Profesor: Miguel Ángel Cabeza\\
+\end{flushleft}
+
+\begin{flushright}\vspace{-20mm}
+\includegraphics[height=2cm]{logo.png}
+\end{flushright}
+ 
+\begin{center}\vspace{0cm}
+\textbf{\large PER5786 2022-2023  Física 1 (GFI) - PER5786 2022-2023}\\
+ Tema 1 - Magnitudes y unidades físicas
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Ejercicio 3 propuesto}\\
+
+Los siguientes modelos intentan predecir el caudal volumétrico Q de fluido (en \textasciicircum3/) a través de un pequeño orificio de área A en el costado de un tanque lleno de líquido hasta una altura H por encima del orificio:
+
+\begin{gather}
+Q=H\sqrt{2Ag} \qquad Q=\frac{AH^2}{g} \qquad Q=A\sqrt{2Hg}
+\end{gather}
+
+¿Cuál de las propuestas es dimensionalmente correcta?\\
+
+\textbf{Solución:}\\
+
+Primero se establecen las dimensiones que están asociadas a las formulas en mención, a saber:
+
+\begin{equation*}
+\begin{split}
+Q = \frac{m^3}{s} \rightarrow \frac{[L]^3}{[T]}  \qquad
+A  = \pi r^2 \rightarrow [L]^2  \qquad
+H = Altura \rightarrow [L]  \qquad
+g = 9.8 \frac{m}{s^2} \rightarrow \frac{[L]}{[T]^2}
+\end{split}
+\end{equation*}
+
+\textbf{Propuesta dimensional No. 1} $\rightarrow Dimensionalmente\, NO\, ES\, CORRECTA$\\
+
+\begin{equation*}
+Q=H\sqrt{2Ag} \rightarrow [L]\sqrt{[L]^2\frac{L}{T^2}} \rightarrow  \frac{[L]^2}{[T]}\sqrt{[L]} 
+\end{equation*}
+
+\begin{equation*}
+Q=\frac{[L]^2}{[T]}\sqrt{[L]}  \neq Q=\frac{[L]^3}{[T]}
+\end{equation*}
+
+\textbf{Propuesta dimensional No. 2} $\rightarrow Dimensionalmente\, NO\, ES\, CORRECTA$\\
+
+\begin{equation*}
+Q=\frac{AH^2}{g} \rightarrow \frac{[L]^2[L]^2}{\frac{[L]}{[T]^2}}  \rightarrow [L]^3[T]^2
+\end{equation*}
+
+\begin{equation*}
+Q=[L]^3[T]^2 \neq Q=\frac{[L]^3}{[T]}
+\end{equation*}
+
+\textbf{Propuesta dimensional No. 3}  $\rightarrow Dimensionalmente\, SI\, ES\, CORRECTA$\\
+
+\begin{equation*}
+Q=A\sqrt{2Hg} \rightarrow [L]^2\sqrt{\frac{[L]^2}{[T]^2}} \rightarrow \frac{[L]^3}{[T]}
+\end{equation*}
+
+\begin{equation*}
+Q=\frac{[L]^3}{[T]} = \frac{[L]^3}{[T]}
+\end{equation*}
+
+%%%%%%%%%%%%%%%%%%%%
+
+% \begin{thebibliography}{1}
+% \bibitem[Wolffram]{WF} GALLARDO, Tabaré., Surfaces of Constant Tisserand Parameter., https://demonstrations.wolfram.com/SurfacesOfConstantTisserandParameter/
+% \end{thebibliography}
+
+\end{document}
+

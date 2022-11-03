@@ -17,6 +17,7 @@
 \usepackage{amssymb}
 \usepackage{eucal}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{esvect}
 \pagestyle{empty}
 \DeclareMathOperator{\tr}{Tr}
 \newcommand*{\op}[1]{\check{\mathbf#1}}
@@ -65,6 +66,7 @@
 Estudiante: Fabio Quimbay\\
 Email: fabio.quimbay883@comunidadunir.net\\
 Profesor: Miguel Ángel Cabeza\\
+Fecha: Noviembre 3 de 2022\\
 \end{flushleft}
 
 \begin{flushright}\vspace{-20mm}
@@ -73,7 +75,7 @@ Profesor: Miguel Ángel Cabeza\\
  
 \begin{center}\vspace{0cm}
 \textbf{\large PER5786 2022-2023  Física 1 (GFI) - PER5786 2022-2023}\\
- Tema 1 - Magnitudes y unidades físicas
+ Tema 2 - Cinemática
 \end{center}
 
  
@@ -84,42 +86,37 @@ Profesor: Miguel Ángel Cabeza\\
 \bigskip
 
 %%%%%%%%%%%%%%%%%%%%
-\textbf{Ejercicio 2 propuesto}\\
+\textbf{Ejercicio 1 propuesto}\\
 
-Existe un parámetro en astrodinámica que se denomina "Parámetro de Tisserand" en honor al astrofísico francés que lo propuso. Una explicación breve de cómo se calcula la podéis ver en los siguientes enlaces:
+El automóvil Thrust SSC en 1997 fue el primero en superar oficialmente la velocidad del sonido; estaba propulsado por dos motores a reacción.\\
+El conductor realizó dos trayectos a lo largo del recorrido, uno en cada dirección, para anular los efectos del viento. El automóvil viajó primero de izquierda a derecha, y recorrió una distancia de 1609 m en un tiempo de 4.740 s. De derecha a izquierda, el automóvil recorrió la misma distancia en 4.695 s. A partir de estos datos, determina la velocidad media para cada trayecto.\\
 
-\begin{enumerate}
+\textbf{Solución Escenarios:}\\
 
-	\item YouTube: https://www.youtube.com/watch?v=aZQIyR0pTsI
-	\item Wikipedia: https://es.wikipedia.org/wiki/Parámetro\_de\_Tisserand
-	
-\end{enumerate}	
+Para el cálculo de la velocidad media se tomará la siguiente formula:
 
-De acuerdo con el análisis dimensional de la ecuación para calcular el parámetro de Tisserand, ¿sería correcto afirmar que dicho parámetro es una magnitud física?\\
+\begin{align}
+\vec{V}_{m} = \frac{\Delta\vec{r}}{\Delta{t}}=\frac{\vec{r}(t_{2})-\vec{r}(t_{1})}{t_{2}-t_{1}}
+\end{align}
 
-\textbf{Solución:}\\
 
-El parámetro de Tisserand es una constante en el marco del problema circular restringido de tres cuerpos dado por \cite{WF}:
+\textbf{Trayecto No. 1}: $\qquad d=1,609\,m \qquad t_{1} = 0\,s \qquad t_{2} = 4.740\,s$
 
-\begin{equation}\label{eq:1}
-T = \frac{a_{2}}{a_{3}}+2\sqrt{\frac{a_{3}}{a_{2}}(1-{e_{3}}^2)}\cos{i_{3}}
-\end{equation}
+\begin{align}
+\vec{V}_{m} = \frac{1,609\,m - 0\,m}{4.740\,s - 0 s} \Rightarrow 339.451\,m/s
+\end{align}
 
-donde $a_{2}$ es el semieje mayor de la órbita del segundo cuerpo y $a_{3}$, $e_{3}$, $i_{3}$, respectivamente, el semieje mayor, la excentricidad y la inclinación de la órbita del tercer cuerpo.
+La velocidad media $\vec{V}_{m}$ para el trayecto 1 es $\textbf{339.451\,m/s}$\\
 
-Al expresar la ecuación $\ref{eq:1}$ en términos de sus dimensiones, obtenemos:
+\textbf{Trayecto No. 2}: $\qquad d=1,609\,m \qquad t_{1} = 0\,s \qquad t_{2} = 4.695\,s$
 
-\begin{equation}\label{eq:2}
-T = \frac{[L]}{[L]}+2\sqrt{\frac{[L]}{[L]}(1-{\frac{[L]^2}{[L]^2}})}1
-\end{equation}
+\begin{align}
+\vec{V}_{m} = \frac{1,609\,m - 0\,m}{4.695\,s - 0 s} \Rightarrow 342.705\,m/s
+\end{align}
 
-Simplificando la ecuación $\ref{eq:2}$, se identifica que las dimensiones de longitud se cancelan, sujeta a los parámetros empleados, por lo que \textbf{el Parámetro de Tisserand es adimensional}.
+La velocidad media $\vec{V}_{m}$ para el trayecto 2 es $\textbf{-342.705\,m/s}$.\footnote{El signo negativo se da debido el sentido de la trayectoria, de derecha a izquierda.}
 
 %%%%%%%%%%%%%%%%%%%%
-
-\begin{thebibliography}{1}
- \bibitem[Wolffram]{WF} GALLARDO, Tabaré., Surfaces of Constant Tisserand Parameter., https://demonstrations.wolfram.com/SurfacesOfConstantTisserandParameter/
-\end{thebibliography}
 
 \end{document}
 

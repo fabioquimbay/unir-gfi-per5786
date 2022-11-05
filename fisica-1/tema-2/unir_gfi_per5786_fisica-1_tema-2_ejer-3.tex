@@ -33,6 +33,7 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{wrapfig}
+\usepackage[shortlabels]{enumitem}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -67,7 +68,7 @@
 Estudiante: Fabio Quimbay\\
 Email: fabio.quimbay883@comunidadunir.net\\
 Profesor: Miguel Ángel Cabeza\\
-Fecha: Noviembre 3 de 2022\\
+Fecha: Noviembre 4 de 2022\\
 \end{flushleft}
 
 \begin{flushright}\vspace{-20mm}
@@ -87,40 +88,57 @@ Fecha: Noviembre 3 de 2022\\
 \bigskip
 
 %%%%%%%%%%%%%%%%%%%%
-\textbf{Ejercicio 1 propuesto}\\
+\textbf{Ejercicio 3 propuesto}\\
+
+La posición de una partícula que se mueve a lo largo del eje x varía con el tiempo t de acuerdo con la relación $x = t^3 - 12t + 20$, donde x se expresa en metros, y t en segundos.
+
+\begin{enumerate}[(a)] 
+\item {Encuentra la velocidad y la aceleración de la partícula en función del tiempo.}
+\item {¿Ha habido alguna vez un momento en que $v = 0$?}
+\item {Describe el movimiento de la partícula para $t \ge 0$}
+\end{enumerate}
+
+\textbf{Solución:}\\
+
+\textbf{a)}: La derivada de la posición equivale a la velocidad y la derivada de la velocidad (doble derivada de la posición) equivale a la aceleración, a saber:
+
+\begin{align}
+	\vec{X}_{t} &= f(x) = t^3 - 12t + 20\\
+	\vec{V}_{t} &= \frac{\partial f}{\partial t} = 3t^2 - 12\\
+	\vec{A}_{t} &= \frac{\partial^2 f}{\partial t} = 6t
+\end{align}
+
+La velocidad y la aceleración en función del tiempo son $\vec{V}_{t}=3t^2 - 12$ y $\vec{A}_{t} = 6t$, respectivamente.\\
+
+\textbf{b)}: Si ha habido un momento donde v = 0, a saber:
 
 \begin{wrapfigure}{r}{0.25\textwidth}
     \centering
-    \includegraphics[width=0.25\textwidth]{ejemplo_1.png}
+    \includegraphics[width=0.25\textwidth]{ejemplo_3_punto_2.png}
 \end{wrapfigure}
 
-El automóvil Thrust SSC en 1997 fue el primero en superar oficialmente la velocidad del sonido; estaba propulsado por dos motores a reacción.\\
-El conductor realizó dos trayectos a lo largo del recorrido, uno en cada dirección, para anular los efectos del viento. El automóvil viajó primero de izquierda a derecha, y recorrió una distancia de 1609 m en un tiempo de 4.740 s. De derecha a izquierda, el automóvil recorrió la misma distancia en 4.695 s. A partir de estos datos, determina la velocidad media para cada trayecto.\\
+\begin{align*}
+	\vec{V}_{t} &= 3t^2 - 12 = 0\\
+	3t^2 &= 12\\
+	t^2 &= \frac{12}{3} = 4\\
+	\sqrt{t^2} &= \sqrt{4}\\
+	t &= \pm 2
+\end{align*}
 
-\textbf{Solución Escenarios:}\\
+La velocidad $\vec{V}_{t}=0$ cuando se tiene un $t = \pm 2$ seg.\\
 
-Para el cálculo de la velocidad media se tomará la siguiente formula:
+\textbf{c)}: El movimiento de la partícula a partir de $t \ge 0$ esta descrito por la siguiente gráfica, a saber:
 
-\begin{align}
-\vec{V}_{m} = \frac{\Delta\vec{r}}{\Delta{t}}=\frac{\vec{r}(t_{2})-\vec{r}(t_{1})}{t_{2}-t_{1}}
-\end{align}
+\begin{enumerate}[(a)] 
+\item {La posición es decreciente, pero a partir del t=2.5s aprox. es creciente.}
+\item {La velocidad esta descrita por un movimiento creciente.}
+\item {La aceleración es lineal.}
+\end{enumerate}
 
-
-\textbf{Trayecto No. 1}: $\qquad d=1,609\,m \qquad t_{1} = 0\,s \qquad t_{2} = 4.740\,s$
-
-\begin{align}
-\vec{V}_{m} = \frac{1,609\,m - 0\,m}{4.740\,s - 0 s} \Rightarrow 339.451\,m/s
-\end{align}
-
-La velocidad media $\vec{V}_{m}$ para el trayecto 1 es $\textbf{339.451\,m/s}$\\
-
-\textbf{Trayecto No. 2}: $\qquad d=1,609\,m \qquad t_{1} = 0\,s \qquad t_{2} = 4.695\,s$
-
-\begin{align}
-\vec{V}_{m} = \frac{1,609\,m - 0\,m}{4.695\,s - 0 s} \Rightarrow 342.705\,m/s
-\end{align}
-
-La velocidad media $\vec{V}_{m}$ para el trayecto 2 es $\textbf{-342.705\,m/s}$.\footnote{El signo negativo se da debido el sentido de la trayectoria, de derecha a izquierda.}
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \centering
+    \includegraphics[width=0.35\textwidth]{ejemplo_3_punto_3.png}
+\end{wrapfigure}
 
 %%%%%%%%%%%%%%%%%%%%
 

@@ -1,0 +1,122 @@
+% Contributions are much appreciated, in order to contribute to this project, head over to this repository:
+% https://github.com/bshramin/uofa-eng-assignment
+
+\documentclass[11pt,letterpaper]{article}
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{esvect}
+\pagestyle{empty}
+\DeclareMathOperator{\tr}{Tr}
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\opvec}[1]{\check{\vec #1}}
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+\usepackage{lipsum}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage[shortlabels]{enumitem}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\pagestyle{plain}
+
+\begin{flushleft}
+Estudiante: Fabio Quimbay\\
+Email: fabio.quimbay883@comunidadunir.net\\
+Profesor: Miguel Ángel Cabeza\\
+Fecha: Noviembre 8 de 2022\\
+\end{flushleft}
+
+\begin{flushright}\vspace{-20mm}
+\includegraphics[height=2cm]{logo.png}
+\end{flushright}
+ 
+\begin{center}\vspace{0cm}
+\textbf{\large PER5786 2022-2023  Física 1 (GFI) - PER5786 2022-2023}\\
+ Tema 2 - Cinemática
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Ejercicio 6 propuesto}\\
+
+Un cuerpo describe una trayectoria circular en la que la velocidad angular viene dada por la ecuación $\omega = t^2 + 4t +2$. Si para t=2 segundos el cuerpo ha recorrido un ángulo de 10 radianes, determinar el ángulo que habrá recorrido $\theta$ cuando t=3 segundos.\\
+
+\textbf{Solución:}\\
+
+Dada la velocidad angular $\omega$ al integrarse podemos obtener una ecuación con la cual determinar el ángulo recorrido, a saber:
+
+\begin{align}
+\theta &= \int_{a}^{b} t^2 + 4t +2\,dt\\
+\theta &= \frac{t^3}{3} + 2t^2 + 2t + C
+\end{align}
+
+De esta ecuación despejamos C, sabiendo que $\theta$ = 10 rad, con lo que obtenemos:
+
+\begin{align}
+C &= -\frac{14}{3}
+\end{align}
+
+Finalmente, con el valor de C identificado, lo empleados en la ecuación original y así poder determinar el ángulo recorrido, a saber:
+
+\begin{align}
+\theta &= \frac{t^3}{3} + 2t^2 + 2t - \frac{14}{3}\\
+\theta &= 28.\overline{3}\,rad
+\end{align}
+
+Así podemos concluir, que ángulo recorrido $\theta$ cuando t=3\,s es de $28.\overline{3}\,rad$.
+
+%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+

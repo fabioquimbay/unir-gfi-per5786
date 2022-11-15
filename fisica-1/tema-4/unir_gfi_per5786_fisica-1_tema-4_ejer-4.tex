@@ -1,0 +1,140 @@
+% Contributions are much appreciated, in order to contribute to this project, head over to this repository:
+% https://github.com/bshramin/uofa-eng-assignment
+
+\documentclass[11pt,letterpaper]{article}
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{esvect}
+\pagestyle{empty}
+\DeclareMathOperator{\tr}{Tr}
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\opvec}[1]{\check{\vec #1}}
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+\usepackage{lipsum}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage[shortlabels]{enumitem}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\pagestyle{plain}
+
+\begin{flushleft}
+Estudiante: Fabio Quimbay\\
+Email: fabio.quimbay883@comunidadunir.net\\
+Profesor: Miguel Ángel Cabeza\\
+Fecha: Noviembre 15 de 2022\\
+\end{flushleft}
+
+\begin{flushright}\vspace{-20mm}
+\includegraphics[height=2cm]{logo.png}
+\end{flushright}
+ 
+\begin{center}\vspace{0cm}
+\textbf{\large PER5786 2022-2023  Física 1 (GFI) - PER5786 2022-2023}\\
+ Tema 4 - Dinámica - Leyes de Newton
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Problema propuesto 4}\\
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+\begin{center}
+\includegraphics[width=0.25\textwidth]{problema_4.png}
+\end{center}
+\end{wrapfigure}
+
+Un vehículo de 1500 kg circula a $30i+2j$ m/s cuando choca frontalmente con otro coche de 1000 kg que circulaba a $40i +5j\,m/s$. Si después de la colisión ambos vehículos quedan unidos, determinar la velocidad con la que se moverá el conjunto resultante de la colisión.\\
+
+\textbf{Formulas base:}\\
+
+Se tomarán las siguientes formulas base de la Dinámica Clásica (Leyes de Newton):
+
+\begin{align}
+\boxed{ \frac{\Delta P_{r}}{\Delta t} = \frac{\Delta P_{b}}{\Delta t} \Rightarrow m_{r} \cdot V_{r} = m_{b} \cdot V_{b}}\\
+\boxed{ P_{o_{x}} = P_{f_{x}}}
+\end{align}
+
+\textbf{Solución:}\\
+
+De la ecuación (1) se puede desglosar en sus componentes (i, j), de la siguiente manera:
+
+\begin{align}
+P_{o_{x}} &= m_{a} \cdot V_{o_{a_{x}}} + m_{b} \cdot V_{o_{b_{x}}} \\
+P_{f_{x}} &= (m_{a} + m_{b}) \cdot V_{f_{x}}
+\end{align}
+
+Por lo que despejando esta ecuación en términos de su velocidad final ($V_{f}$) obtendremos:
+
+\begin{align*}
+V_{f_{x}} &= \frac{m_{a} \cdot V_{o_{a_{x}}} + m_{b} \cdot V_{o_{b_{x}}}}{(m_{a} + m_{b}) }\\
+V_{f_{x}} &= \frac{1500 \cdot 30 + 1000 \cdot 40}{1500 + 1000} \\
+V_{f_{x}} &= 34\,\vec{i}\,m/s
+\end{align*}
+
+De manera similiar hallamos la componente en el eje de la Y, así:
+
+\begin{align*}
+V_{f_{y}} &= \frac{m_{a} \cdot V_{o_{a_{y}}} + m_{b} \cdot V_{o_{b_{y}}}}{(m_{a} + m_{b}) }\\
+V_{f_{y}} &= \frac{1500 \cdot 2 + 1000 \cdot 5}{1500 + 1000} \\
+V_{f_{y}} &= 3.2\,\vec{j}\,m/s
+\end{align*}
+
+Por lo que la velocidad final resultante ($\vec{V_{f}}$) tendrá por valor $\vec{V_{f}} = 34\vec{i}\,m/s + 3.2\vec{j}\,m/s$
+
+%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
